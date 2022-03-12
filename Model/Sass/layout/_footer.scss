@@ -1,0 +1,47 @@
+@import "../_variables";
+@import "../mixins"; 
+
+footer{ 
+    background-color: $txt-fond-clair;
+    color: $txt-fond-sombre;
+    @include desktoponly{
+        display: grid;
+        grid-template-columns:repeat( 2,1fr)
+    }
+    a{
+        color: white;
+    }
+    h3{
+        padding: $padding-M;
+        font-family: "Shrikhand";
+        @include desktoponly{
+            font-size: 28px;
+            display: grid;
+            justify-content: center;
+            grid-column: 1/3;
+            padding: $padding-S;
+        }
+    }
+    ul{
+        
+        @include desktoponly{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column: 1/3;
+        text-align: center;
+        }
+        li{
+            padding: $padding-S $padding-M;
+            font-size: 18px;
+            letter-spacing: 1px;
+            @include desktoponly{
+                padding: 10px 0px;
+            }
+            i{
+                padding-right: 8px;
+            }
+        }
+    }
+}
+    
+  

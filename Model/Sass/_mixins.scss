@@ -1,0 +1,29 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+
+//Smartphone
+@mixin phoneonly {
+    @media (max-width: 767px) {@content;}
+}
+
+//tablette et Smartphone
+@mixin tabandless {
+    @media (max-width:1023px) {@content;}
+}
+
+//Tablette
+@mixin tabonly {
+    @media (min-width:768px) and (max-width:1023px) {@content;}
+}
+
+//Tablette et Desktop
+@mixin tabandmore {
+    @media (min-width:768px) {@content;}
+}
+
+// Desktop 
+@mixin desktoponly{
+    @media (min-width:1024px) {@content;}
+}
