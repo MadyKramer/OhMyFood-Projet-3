@@ -327,8 +327,8 @@ main .menucontainer .restaurantID i {
 }
 @media (min-width: 1024px) {
   main .menucontainer .menusection {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 main .menucontainer .menusection .menu {
@@ -337,7 +337,7 @@ main .menucontainer .menusection .menu {
   gap: 15px;
 }
 main .menucontainer .menusection .menu h2 {
-  padding: 6% 0% 1% 3%;
+  padding: 2rem 0 0.7rem 1rem;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 20px;
@@ -349,7 +349,7 @@ main .menucontainer .menusection .menu h2::after {
   height: 0.25rem;
   background-color: #99E2D0;
   position: absolute;
-  left: 3%;
+  left: 1rem;
   bottom: 0%;
 }
 main .menucontainer .menusection .menu__card1 {
@@ -369,9 +369,13 @@ main .menucontainer .menusection .menu__card {
   flex-direction: row;
   background-color: #ffffff;
   border-radius: 15px;
-  margin: 0% 3%;
+  margin: 0 1rem;
   box-shadow: 4px 4px 6px #CBCBCB;
   overflow: hidden;
+}
+main .menucontainer .menusection .menu__card__description {
+  display: flex;
+  flex-direction: row;
 }
 main .menucontainer .menusection .menu__card:hover > .menu__card__valid {
   margin: 0;
@@ -380,20 +384,30 @@ main .menucontainer .menusection .menu__card:hover > .menu__card__valid .fa-chec
   animation: rotateicon 1s ease-in-out both;
 }
 main .menucontainer .menusection .menu__card__price {
-  padding: 3%;
+  padding: 1rem 1rem 1rem 0;
+  margin: 1rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   margin-left: auto;
 }
 main .menucontainer .menusection .menu__card__txt {
-  padding: 3%;
+  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 70%;
+}
+main .menucontainer .menusection .menu__card__txt h3 {
+  padding-bottom: 0.2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .menucontainer .menusection .menu__card__txt h3 {
-  padding-bottom: 3%;
+main .menucontainer .menusection .menu__card__txt p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .menucontainer .menusection .menu__card__valid {
   background-color: #99E2D0;

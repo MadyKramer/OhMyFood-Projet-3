@@ -171,9 +171,10 @@ main{
         }
     }
     .menusection{
+        
         @include desktoponly{
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
             
         }
         .menu{
@@ -181,7 +182,7 @@ main{
             flex-direction: column;
             gap: 15px;
             h2{
-                padding: 6% 0% 1% 3%;
+                padding: 2rem 0 0.7rem 1rem;
                 text-transform: uppercase;
                 font-weight: normal;
                 font-size: 20px;
@@ -192,7 +193,7 @@ main{
                     height: 0.25rem;
                     background-color: $clr-tertiary;
                     position: absolute;
-                    left: 3%;
+                    left: 1rem;
                     bottom: 0%;
                 }
             }
@@ -213,10 +214,16 @@ main{
                 flex-direction: row;
                 background-color: $txt-fond-sombre;
                 border-radius: 15px;
-                margin: 0% 3%;
+                margin: 0 1rem;
                 box-shadow: 4px 4px 6px $gris-degr;
                 overflow: hidden;
                 
+
+                &__description{
+                
+                    display: flex;
+                    flex-direction: row;
+                }
                 &:hover{
                     & > .menu__card__valid{
                         margin: 0; 
@@ -226,21 +233,33 @@ main{
                     }   
                 }
                 &__price{
-                    padding: 3%;
+                    padding: 1rem 1rem 1rem 0;
+                    margin: 1rem;
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-end;
                     margin-left: auto;
+
                 }
                 &__txt{
-                    padding: 3%;
+                    padding: 1rem;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    width: 70%;
                    h3{
-                       padding-bottom: 3%;
+                       padding-bottom: 0.2rem;
+                       white-space: nowrap;
+                       text-overflow: ellipsis;
+                       overflow: hidden;
+                    }
+                    p{
+                       white-space: nowrap;
+                       text-overflow: ellipsis;
+                       overflow: hidden;
                     }
                 }
+            
                 &__valid{
                     background-color: $clr-tertiary;
                     color: $txt-fond-sombre;
