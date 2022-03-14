@@ -181,6 +181,14 @@ Loading Spinner
     transform: translateY(-5rem);
   }
 }
+@keyframes disap {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 /* Début Main */
 .loadingspinner {
   width: 100%;
@@ -193,6 +201,7 @@ Loading Spinner
   justify-content: center;
   align-items: center;
   opacity: 0.9;
+  animation: disap 2s 5s forwards;
 }
 .loadingspinner .balls {
   display: flex;
@@ -213,6 +222,7 @@ Loading Spinner
   border-radius: 50px;
   margin: 1rem;
   box-shadow: 2px 2px black;
+  animation: disap 1s 4s both;
 }
 .loadingspinner .balls .ball1 {
   background-color: #FF79DA;
