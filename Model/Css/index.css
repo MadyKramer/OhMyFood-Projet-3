@@ -26,10 +26,10 @@ COULEURS SECONDAIRES
 TEXTES
 *********************/
 /*********************
-PADDING
+Padding
 *********************/
 /*********************
-EXTEND
+Loading Spinner
 *********************/
 /*********************
 BREAKPOINTS
@@ -152,10 +152,10 @@ COULEURS SECONDAIRES
 TEXTES
 *********************/
 /*********************
-PADDING
+Padding
 *********************/
 /*********************
-EXTEND
+Loading Spinner
 *********************/
 @keyframes menu-appear {
   0% {
@@ -173,7 +173,69 @@ EXTEND
     transform: rotate(360deg);
   }
 }
+@keyframes jumpingball {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5rem);
+  }
+}
 /* Début Main */
+.loadingspinner {
+  width: 100%;
+  height: 100%;
+  background-color: #2D2929;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+.loadingspinner .balls {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid black;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingspinner .balls .ball {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid black;
+  border-radius: 50px;
+  margin: 1rem;
+  box-shadow: 2px 2px black;
+}
+.loadingspinner .balls .ball1 {
+  background-color: #FF79DA;
+  animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
+  animation-iteration-count: 6;
+  animation-direction: alternate;
+  animation-delay: 100ms;
+}
+.loadingspinner .balls .ball2 {
+  background-color: #9356DC;
+  animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
+  animation-iteration-count: 6;
+  animation-direction: alternate;
+  animation-delay: 300ms;
+}
+.loadingspinner .balls .ball3 {
+  background-color: #99E2D0;
+  animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
+  animation-iteration-count: 6;
+  animation-direction: alternate;
+  animation-delay: 500ms;
+}
+
 main {
   font-family: "Roboto", sans-serif;
 }
@@ -227,6 +289,9 @@ main .tutosection .tuto__list {
   box-shadow: 4px 4px 6px #CBCBCB;
   width: 50%;
   position: relative;
+}
+main .tutosection .tuto__list:hover {
+  background-color: rgba(147, 86, 220, 0.2);
 }
 main .tutosection .tuto__list::before {
   counter-increment: tutolist;
@@ -381,7 +446,7 @@ main .menucontainer .menusection .menu__card:hover > .menu__card__valid {
   margin: 0;
 }
 main .menucontainer .menusection .menu__card:hover > .menu__card__valid .fa-check-circle {
-  animation: rotateicon 1s ease-in-out both;
+  animation: rotateicon 700ms ease-in-out both;
 }
 main .menucontainer .menusection .menu__card__price {
   padding: 1rem 1rem 1rem 0;
@@ -421,5 +486,5 @@ main .menucontainer .menusection .menu__card__valid {
 }
 main .menucontainer .menusection .menu__card__valid .fa-check-circle {
   font-size: 1.5rem;
-  transform: rotate(0);
+  transform: rotate(0deg);
 }

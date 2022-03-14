@@ -17,3 +17,16 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes jumpingball{
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-5rem);
+    }
+}
+
+
+

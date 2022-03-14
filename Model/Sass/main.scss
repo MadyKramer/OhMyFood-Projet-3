@@ -10,6 +10,65 @@
 
 /* Début Main */
 
+
+.loadingspinner{
+    width: 100%;
+    height: 100%;
+    background-color: $txt-fond-clair;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    & .balls{
+        display: flex;
+        flex-direction: row;
+        border: 4px solid black;
+        background-color: white;
+        height: 250px;
+        width: 250px;
+        border-radius: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        & .ball{
+            width: $ballsize;
+            height: $ballsize;
+            border: 3px solid black;
+            border-radius: 50px;
+            margin: 1rem;
+            box-shadow: 2px 2px black;
+            
+        }
+        & .ball1{
+            background-color: $clr-secondary;
+            animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95);
+            animation-iteration-count: 6;
+            animation-direction: alternate;
+            animation-delay: 100ms;
+        }
+        & .ball2{
+            background-color: $clr-primary;
+            animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95); 
+            animation-iteration-count: 6;
+            animation-direction: alternate;
+            animation-delay: 300ms;
+        }
+        & .ball3{
+            background-color: $clr-tertiary;
+            animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95);
+            animation-iteration-count: 6;
+            animation-direction: alternate;
+            animation-delay: 500ms;
+        }
+    }
+}
+
+   
+
 main{
     font-family: 'Roboto', sans-serif;
     .introsection{
@@ -61,6 +120,7 @@ main{
                 flex-direction: row;
                 padding: $padding-M;
                 gap: 2%;
+                
             }
             &__list{
                 background-color: $gris-clair;
@@ -70,6 +130,11 @@ main{
                 box-shadow: 4px 4px 6px $gris-degr;
                 width: 50%;
                 position: relative;
+                
+                &:hover{
+                    background-color: rgba(147,86,220, .2)
+                   
+                }
                 &::before{ 
                     counter-increment: tutolist;
                     content: counter(tutolist);
@@ -88,6 +153,7 @@ main{
                 i{
                     position: relative;
                     right: 17%;
+                    
                 }
             }
         }
@@ -228,7 +294,7 @@ main{
                     & > .menu__card__valid{
                         margin: 0; 
                         .fa-check-circle{
-                            animation: rotateicon 1s ease-in-out both;
+                            animation: rotateicon 700ms ease-in-out both;
                         }
                     }   
                 }
@@ -270,9 +336,8 @@ main{
                     justify-content: center;
                     align-items: center;
                     .fa-check-circle{
-                        
                         font-size: 1.5rem;
-                        transform: rotate(0);
+                        transform: rotate(0deg);
                         }
                     }
                 }
