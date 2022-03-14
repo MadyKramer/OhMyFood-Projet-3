@@ -201,7 +201,7 @@ Loading Spinner
   justify-content: center;
   align-items: center;
   opacity: 0.9;
-  animation: disap 2s 5s forwards;
+  animation: disap 3s forwards;
 }
 .loadingspinner .balls {
   display: flex;
@@ -222,26 +222,25 @@ Loading Spinner
   border-radius: 50px;
   margin: 1rem;
   box-shadow: 2px 2px black;
-  animation: disap 1s 4s both;
 }
 .loadingspinner .balls .ball1 {
   background-color: #FF79DA;
   animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
-  animation-iteration-count: 6;
+  animation-iteration-count: 8;
   animation-direction: alternate;
   animation-delay: 100ms;
 }
 .loadingspinner .balls .ball2 {
   background-color: #9356DC;
   animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
-  animation-iteration-count: 6;
+  animation-iteration-count: 8;
   animation-direction: alternate;
   animation-delay: 300ms;
 }
 .loadingspinner .balls .ball3 {
   background-color: #99E2D0;
   animation: jumpingball 610ms cubic-bezier(0.17, 0.76, 0.45, 0.95);
-  animation-iteration-count: 6;
+  animation-iteration-count: 8;
   animation-direction: alternate;
   animation-delay: 500ms;
 }

@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0.9;
-    animation: disap 2s 5s forwards;
+    animation: disap 3s forwards;
     & .balls{
         display: flex;
         flex-direction: row;
@@ -34,7 +34,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
         & .ball{
             width: $ballsize;
             height: $ballsize;
@@ -42,26 +41,25 @@
             border-radius: 50px;
             margin: 1rem;
             box-shadow: 2px 2px black;
-            animation: disap 1s 4s both;
         }
         & .ball1{
             background-color: $clr-secondary;
             animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95);
-            animation-iteration-count: 6;
+            animation-iteration-count: 8;
             animation-direction: alternate;
             animation-delay: 100ms;
         }
         & .ball2{
             background-color: $clr-primary;
             animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95); 
-            animation-iteration-count: 6;
+            animation-iteration-count: 8;
             animation-direction: alternate;
             animation-delay: 300ms;
         }
         & .ball3{
             background-color: $clr-tertiary;
             animation: jumpingball 610ms cubic-bezier(.17,.76,.45,.95);
-            animation-iteration-count: 6;
+            animation-iteration-count: 8;
             animation-direction: alternate;
             animation-delay: 500ms;
         }
