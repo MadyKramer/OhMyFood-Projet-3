@@ -37,8 +37,9 @@ BREAKPOINTS
 footer {
   background-color: #2D2929;
   color: #ffffff;
+  font-family: "Roboto";
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -51,7 +52,7 @@ footer h3 {
   padding: 5%;
   font-family: "Shrikhand";
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   footer h3 {
     font-size: 28px;
     display: grid;
@@ -60,7 +61,7 @@ footer h3 {
     padding: 5px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   footer ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -73,7 +74,7 @@ footer ul li {
   font-size: 18px;
   letter-spacing: 1px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   footer ul li {
     padding: 10px 0px;
   }
@@ -114,7 +115,7 @@ footer ul li i {
 }
 .full:hover {
   opacity: 1;
-  transform: scale(1.4);
+  transform: scale(1.15);
 }
 
 .empty {
@@ -137,7 +138,7 @@ main .menufooter, main .tutosection .tuto, main .introsection .intro .btn, main 
   text-align: center;
 }
 
-main .cardssection .sectiontitle, main .tutosection .sectiontitle, main .introsection .intro h1 {
+main .cardssection .sectiontitle, main .tutosection .sectiontitle, main .introsection .intro h2 {
   font-size: 27px;
   font-weight: bold;
 }
@@ -167,7 +168,7 @@ Loading Spinner
 }
 @keyframes rotateicon {
   0% {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -259,7 +260,7 @@ main .introsection .intro {
   padding: 3rem;
   background-color: #EFEFEF;
 }
-main .introsection .intro h1 {
+main .introsection .intro h2 {
   padding: 15px 20px 5px 20px;
   font-size: 30px;
 }
@@ -271,7 +272,7 @@ main .tutosection .sectiontitle {
   padding-top: 10%;
   padding-left: 52px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   main .tutosection .sectiontitle {
     padding-top: 5%;
   }
@@ -282,7 +283,7 @@ main .tutosection .tuto {
   padding-top: 3%;
   gap: 25px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   main .tutosection .tuto {
     display: flex;
     flex-direction: row;
@@ -301,6 +302,10 @@ main .tutosection .tuto__list {
 }
 main .tutosection .tuto__list:hover {
   background-color: rgba(147, 86, 220, 0.2);
+  box-shadow: 7px 7px 6px #b7b7b7;
+}
+main .tutosection .tuto__list:hover i {
+  color: #9356DC;
 }
 main .tutosection .tuto__list::before {
   counter-increment: tutolist;
@@ -329,7 +334,7 @@ main .cardssection .sectiontitle {
   padding-top: 10%;
   padding-left: 52px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   main .cardssection .cardslist {
     display: flex;
     flex-wrap: wrap;
@@ -342,7 +347,7 @@ main .cardssection .cardslist .card {
   position: relative;
   margin: 5%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
   main .cardssection .cardslist .card {
     margin: 2%;
     width: 45%;
@@ -399,7 +404,10 @@ main .menucontainer .restaurantID {
 main .menucontainer .restaurantID i {
   font-size: 25px;
 }
-@media (min-width: 1024px) {
+main .menucontainer .restaurantID h2 {
+  font-size: 36px;
+}
+@media (min-width: 1026px) {
   main .menucontainer .menusection {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -447,6 +455,12 @@ main .menucontainer .menusection .menu__card {
   box-shadow: 4px 4px 6px #CBCBCB;
   overflow: hidden;
 }
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  main .menucontainer .menusection .menu__card {
+    flex-grow: 0;
+    max-width: 300px;
+  }
+}
 main .menucontainer .menusection .menu__card__description {
   display: flex;
   flex-direction: row;
@@ -455,7 +469,7 @@ main .menucontainer .menusection .menu__card:hover > .menu__card__valid {
   margin: 0;
 }
 main .menucontainer .menusection .menu__card:hover > .menu__card__valid .fa-check-circle {
-  animation: rotateicon 700ms ease-in-out both;
+  animation: rotateicon 600ms ease-in-out both;
 }
 main .menucontainer .menusection .menu__card__price {
   padding: 1rem 1rem 1rem 0;

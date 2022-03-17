@@ -10,12 +10,12 @@ BREAKPOINTS
 
 //tablette et Smartphone
 @mixin tabandless {
-    @media (max-width:1023px) {@content;}
+    @media (max-width:1025px) {@content;}
 }
 
 //Tablette
 @mixin tabonly {
-    @media (min-width:768px) and (max-width:1023px) {@content;}
+    @media (min-width:768px) and (max-width:1025px) {@content;}
 }
 
 //Tablette et Desktop
@@ -25,5 +25,5 @@ BREAKPOINTS
 
 // Desktop 
 @mixin desktoponly{
-    @media (min-width:1024px) {@content;}
+    @media (min-width:1026px) {@content;}
 }

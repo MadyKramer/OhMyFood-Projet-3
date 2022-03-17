@@ -4,6 +4,7 @@
 footer{ 
     background-color: $txt-fond-clair;
     color: $txt-fond-sombre;
+    font-family: "Roboto";
     @include desktoponly{
         display: grid;
         grid-template-columns:repeat( 2,1fr)

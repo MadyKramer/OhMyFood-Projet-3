@@ -33,10 +33,11 @@
     transition: all 250ms;
     &:hover{
         opacity: 1;
-        transform: scale(1.4);
+        transform: scale(1.15);
     }
 }
 
 .empty{
     position: absolute;
 }
+

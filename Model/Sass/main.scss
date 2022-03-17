@@ -84,7 +84,7 @@ main{
             padding: 3rem;
             @extend %center-list;
             background-color: $gris-clair;
-            h1{
+            h2{
                 @extend %h1bold;
                 padding: 15px 20px 5px 20px;;
                 font-size: 30px;
@@ -129,10 +129,12 @@ main{
                 box-shadow: 4px 4px 6px $gris-degr;
                 width: 50%;
                 position: relative;
-                
                 &:hover{
-                    background-color: rgba(147,86,220, .2)
-                   
+                    background-color: rgba(147,86,220, .2);
+                    box-shadow: 7px 7px 6px darken($gris-degr, 8);
+                    & i{
+                        color: $clr-primary;
+                    }
                 }
                 &::before{ 
                     counter-increment: tutolist;
@@ -234,6 +236,9 @@ main{
         i{
             font-size: 25px;
         }
+        h2{
+            font-size: 36px;
+        }
     }
     .menusection{
         
@@ -282,10 +287,12 @@ main{
                 margin: 0 1rem;
                 box-shadow: 4px 4px 6px $gris-degr;
                 overflow: hidden;
-                
-
+                @media screen and (min-width: 1025px) and (max-width: 1400px){
+                    flex-grow: 0;
+                    max-width: 300px;
+                }
+            
                 &__description{
-                
                     display: flex;
                     flex-direction: row;
                 }
@@ -293,7 +300,7 @@ main{
                     & > .menu__card__valid{
                         margin: 0; 
                         .fa-check-circle{
-                            animation: rotateicon 700ms ease-in-out both;
+                            animation: rotateicon 600ms ease-in-out both;
                         }
                     }   
                 }
@@ -304,7 +311,6 @@ main{
                     align-items: flex-end;
                     justify-content: flex-end;
                     margin-left: auto;
-
                 }
                 &__txt{
                     padding: 1rem;
@@ -324,7 +330,6 @@ main{
                        overflow: hidden;
                     }
                 }
-            
                 &__valid{
                     background-color: $clr-tertiary;
                     color: $txt-fond-sombre;
