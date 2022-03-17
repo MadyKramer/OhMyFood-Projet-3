@@ -19,6 +19,7 @@
     transition: 400ms;
     &:hover{
     filter: brightness(1.1);
+    box-shadow: 7px 7px 6px darken($gris-degr, 8);
     }
 }
 
