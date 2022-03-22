@@ -255,6 +255,9 @@ main .introsection .Paris {
   background: linear-gradient(#CBCBCB 1%, #e3e3e3 7%);
   padding: 20px 0px;
 }
+main .introsection i {
+  padding-right: 10px;
+}
 main .introsection .intro {
   padding: 3rem;
   background-color: #EFEFEF;
@@ -281,6 +284,7 @@ main .tutosection .tuto {
   padding-bottom: 15%;
   padding-top: 3%;
   gap: 25px;
+  white-space: nowrap;
 }
 @media (min-width: 1026px) {
   main .tutosection .tuto {
